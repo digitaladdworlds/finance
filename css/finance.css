@@ -421,7 +421,7 @@ hr {
 }
 @media only screen and (max-width: 600px) {
     body {
-      overflow: auto !important;
+      overflow-y: hidden !important;
     }
   }
   
@@ -432,6 +432,6 @@ hr {
 @media only screen and (max-width: 600px) {
     body {
         overflow-y: auto !important; /* Hide vertical scrollbar */
-        overflow-x: none !important;  /* Allow horizontal scroll if needed */
+        overflow-x: hidden !important;  /* Allow horizontal scroll if needed */
     }
 }
