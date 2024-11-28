@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
 }
@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-/*--- navbar---*/
+/--- navbar---/
 #nav-bar {
     position: sticky;
     top: 0;
@@ -45,7 +45,7 @@ body {
     outline: none !important;
 }
 
-/*--banner section--*/
+/--banner section--/
 #banner {
     background-image: linear-gradient(to right, #454346, #94058d);
     color: white;
@@ -59,11 +59,7 @@ body {
     margin-top: 100px;
 }
 
-.play-btn {
-    width: 45px;
-    margin: 20px;
 
-}
 
 section .banner .btn-btn-warning {
     background-image: linear-gradient(to right, #f3f0b5, rgb(245, 213, 99));
@@ -207,7 +203,7 @@ section .banner .btn-btn-warning {
     /* Slightly lift the div */
 }
 
-/*--about-us--*/
+/--about-us--/
 
 .title {
     font-size: 3rem;
@@ -224,8 +220,8 @@ section .banner .btn-btn-warning {
     /* Slightly increase the size */
 }
 
-#about-us {
-    background: #f8f9fa;
+#About-Us {
+    background-image: linear-gradient(to right, rgb(237, 237, 222), #ece2ec);
     padding-bottom: 50px;
     padding-top: 50px;
 }
@@ -244,7 +240,7 @@ section .banner .btn-btn-warning {
     margin-left: 20px;
 }
 
-/*--contact--*/
+/--contact--/
 #contact {
     margin: 100px 0;
 }
@@ -258,11 +254,12 @@ section .banner .btn-btn-warning {
 
 .contact img {
     box-shadow: 8px 8px 10px #5f1782;
-    height: 80px;
-    width: 15%;
+    height: 100px;
+    width: 20%;
     border-radius: 50%;
     margin: 0 10px;
     transition: all 0.3s ease;
+    margin-top: 30px;
 
 }
 
@@ -304,12 +301,12 @@ textarea.form-control:focus {
 }
 
 
-/*---Form---*/
+/---Form---/
 form {
     background-image: url(../image/6517312.jpg);
 }
 
-/*---socialmedia section----*/
+/---socialmedia section----/
 .social-icons a {
     font-size: 30px;
     color: #5f1782;
@@ -340,7 +337,30 @@ form {
 
 
 
-/*---footer section--*/
+.social-icons a {
+    font-size: 2rem;
+    /* Adjust size of the icons */
+    color: #333;
+    /* Default color for icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.social-icons a:hover {
+    color: rgb(246, 228, 113);
+    /* Change to blue when hovered (adjust as per your design) */
+    transform: scale(1.2);
+    /* Slightly increase the size of the icon */
+}
+
+.social-icons a:active {
+    transform: scale(1);
+    /* Reset scale when icon is clicked */
+}
+
+/---footer section--/
 #footer {
     background-image: linear-gradient(to right, #454346, #94058d);
     color: #fff;
@@ -382,7 +402,6 @@ form {
     font-weight: 600;
 }
 
-
 /* Hover effect for the entire paragraph */
 .footer-box p:hover {
     color: rgb(247, 229, 106);
@@ -401,8 +420,6 @@ form {
     /* Smooth transition for icon hover effect */
 }
 
-
-
 hr {
     background-color: #fff;
 }
@@ -414,24 +431,68 @@ hr {
 }
 
 @media (min-width:378px) {
-    body{ 
-         overflow-x: hidden; 
+    body {
+        overflow-x: hidden;
     }
-    
+
 }
+
 @media only screen and (max-width: 600px) {
     body {
-      overflow-y: hidden !important;
+        overflow: auto !important;
     }
-  }
-  
+}
 
-
-
- 
 @media only screen and (max-width: 600px) {
     body {
-        overflow-y: auto !important; /* Hide vertical scrollbar */
-        overflow-x: hidden !important;  /* Allow horizontal scroll if needed */
+        overflow-y: hidden !important;
+        /* Hide vertical scrollbar */
+        overflow-x: auto !important;
+        /* Allow horizontal scroll if needed */
     }
+}
+
+.choose {
+    background-image: linear-gradient(to right, #f5d0f6, rgb(245, 243, 206));
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color:#b220bf;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #b220bf;
+    color: rgb(225, 188, 19);
+    transform: rotateY(180deg);
 }
