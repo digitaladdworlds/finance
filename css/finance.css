@@ -433,7 +433,7 @@ hr {
 @media (min-width:378px) {
     body {
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto !important;
     }
 
 }
